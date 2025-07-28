@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>AI Development Notes</title>
+        <link>https://ai-dev-notes.vercel.app</link>
+        <description>Insights, tutorials, and discoveries in AI development</description>
+        <lastBuildDate>Fri, 25 Jul 2025 05:52:28 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>en</language>
+        <image>
+            <title>AI Development Notes</title>
+            <url>https://ai-dev-notes.vercel.app/images/logo.png</url>
+            <link>https://ai-dev-notes.vercel.app</link>
+        </image>
+        <copyright>© 2025 AI Development Notes</copyright>
+    </channel>
+</rss>

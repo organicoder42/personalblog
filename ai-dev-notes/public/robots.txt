@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ai-dev-notes.vercel.app/sitemap.xml

@@ -1,0 +1,13 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "AI Development Notes",
+    "home_page_url": "https://ai-dev-notes.vercel.app",
+    "feed_url": "https://ai-dev-notes.vercel.app/feed.json",
+    "description": "Insights, tutorials, and discoveries in AI development",
+    "icon": "https://ai-dev-notes.vercel.app/images/logo.png",
+    "author": {
+        "name": "AI Dev Notes",
+        "url": "https://ai-dev-notes.vercel.app"
+    },
+    "items": []
+}

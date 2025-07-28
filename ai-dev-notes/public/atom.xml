@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://ai-dev-notes.vercel.app</id>
+    <title>AI Development Notes</title>
+    <updated>2025-07-25T05:52:28.115Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <author>
+        <name>AI Dev Notes</name>
+        <email>hello@ai-dev-notes.com</email>
+        <uri>https://ai-dev-notes.vercel.app</uri>
+    </author>
+    <link rel="alternate" href="https://ai-dev-notes.vercel.app"/>
+    <link rel="self" href="https://ai-dev-notes.vercel.app/atom.xml"/>
+    <subtitle>Insights, tutorials, and discoveries in AI development</subtitle>
+    <logo>https://ai-dev-notes.vercel.app/images/logo.png</logo>
+    <icon>https://ai-dev-notes.vercel.app/favicon.ico</icon>
+    <rights>© 2025 AI Development Notes</rights>
+</feed>

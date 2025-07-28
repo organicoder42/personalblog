@@ -1,0 +1,55 @@
+---
+title: "Video Embeds Demo"
+publishedAt: "2025-01-20"
+summary: "Demonstrating YouTube and Loom video embeds with lazy loading for better performance."
+image: "/images/video-demo.jpg"
+tags: ["demo", "videos", "embeds", "performance"]
+draft: false
+---
+
+# Video Embeds Demo
+
+This post demonstrates how to embed YouTube and Loom videos in your MDX posts with lazy loading for better performance.
+
+## YouTube Embed
+
+Here's how to embed a YouTube video using just the video ID:
+
+<YouTube id="dQw4w9WgXcQ" title="Rick Astley - Never Gonna Give You Up" />
+
+You can also use a full YouTube URL - the component will extract the ID automatically:
+
+<YouTube id="https://www.youtube.com/watch?v=dQw4w9WgXcQ" title="Rick Astley - Never Gonna Give You Up (Full URL)" />
+
+## Loom Embed
+
+For Loom videos, you can use the video ID:
+
+<Loom id="a1b2c3d4e5f6" title="Demo Loom Video" />
+
+## Benefits of Lazy Loading
+
+These video embeds implement lazy loading, which means:
+
+- **Faster initial page load** - Videos only load when clicked
+- **Reduced bandwidth usage** - Thumbnails are much smaller than video players
+- **Better user experience** - Users choose when to load videos
+- **SEO friendly** - Page loads quickly for search engines
+
+## Image with Caption
+
+You can also include images with captions using the standard img tag:
+
+![AI Development Workflow](/images/ai-development.jpg "A typical AI development workflow")
+
+## Usage in MDX
+
+To use these components in your MDX files, simply include them like this:
+
+```mdx
+<YouTube id="your-video-id" title="Your video title" />
+<Loom id="your-loom-id" title="Your Loom video title" />
+![Alt text](/path/to/image.jpg "Optional caption")
+```
+
+The components handle various URL formats automatically, so you can use either the video ID or the full URL.

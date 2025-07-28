@@ -1,0 +1,46 @@
+---
+title: "Hello AI Development Notes"
+publishedAt: "2025-01-15"
+summary: "Welcome to my AI development blog where I share insights, tutorials, and discoveries in the world of artificial intelligence and development."
+image: "/images/hello-ai.jpg"
+tags: ["ai", "development", "blog", "introduction"]
+draft: false
+---
+
+# Welcome to AI Development Notes
+
+This is the inaugural post of my AI development blog! Here I'll be sharing my journey through the fascinating world of artificial intelligence, machine learning, and modern development practices.
+
+## What to Expect
+
+- **Technical deep-dives** into AI frameworks and tools
+- **Hands-on tutorials** for building AI applications
+- **Best practices** for ML engineering and deployment
+- **Insights** from working with LLMs and other AI models
+
+## Code Examples
+
+Here's a simple example of using AI in JavaScript:
+
+```javascript
+import OpenAI from 'openai';
+
+const openai = new OpenAI({
+  apiKey: process.env.OPENAI_API_KEY,
+});
+
+async function generateText(prompt) {
+  const completion = await openai.chat.completions.create({
+    messages: [{ role: "user", content: prompt }],
+    model: "gpt-4",
+  });
+  
+  return completion.choices[0].message.content;
+}
+```
+
+## Interactive Content
+
+This blog will also feature embedded videos and interactive content to make learning more engaging.
+
+Stay tuned for more exciting content!
