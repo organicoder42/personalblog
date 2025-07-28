@@ -75,3 +75,15 @@
 .prose th {
   @apply bg-gray-100 dark:bg-gray-800 font-semibold;
 }
+
+/* Ensure images display properly within prose content */
+.prose img {
+  @apply rounded-lg my-6 mx-auto;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Remove margin from paragraphs containing only images to avoid double spacing */
+.prose p:has(img:only-child) {
+  @apply my-0;
+}
