@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
             <p className="text-gray-600 dark:text-gray-400 text-sm">
-              © 2025 Horse & Panda. Built with Next.js and Contentlayer.
+              © 2025 Horse & Panda.
             </p>
           </div>
           
