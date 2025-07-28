@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
             <p className="text-gray-600 dark:text-gray-400 text-sm">
-              © 2025 AI Development Notes. Built with Next.js and Contentlayer.
+              © 2025 Horse & Panda. Built with Next.js and Contentlayer.
             </p>
           </div>
           
@@ -35,7 +35,7 @@ export default function Footer() {
         
         <div className="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700">
           <p className="text-center text-xs text-gray-500 dark:text-gray-500">
-            Sharing insights, tutorials, and discoveries in AI development
+            Personal blog of Horse & Panda
           </p>
         </div>
       </div>

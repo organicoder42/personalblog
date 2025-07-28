@@ -8,9 +8,9 @@ export default function Home() {
   return (
     <div className="container mx-auto px-4 py-8 max-w-4xl">
       <header className="text-center mb-12">
-        <h1 className="text-4xl font-bold mb-4">AI Development Notes</h1>
+        <h1 className="text-4xl font-bold mb-4">Horse & Panda</h1>
         <p className="text-lg text-gray-600 dark:text-gray-400">
-          Insights, tutorials, and discoveries in AI development
+          Personal blog of Horse & Panda
         </p>
       </header>
 

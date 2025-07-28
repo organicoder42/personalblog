@@ -17,14 +17,14 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "AI Development Notes",
-    template: "%s | AI Development Notes"
+    default: "Horse & Panda",
+    template: "%s | Horse & Panda"
   },
-  description: "Insights, tutorials, and discoveries in AI development",
+  description: "Personal blog of Horse & Panda",
   keywords: ["AI", "artificial intelligence", "development", "machine learning", "programming", "tutorials", "blog"],
-  authors: [{ name: "AI Dev Notes", url: "https://ai-dev-notes.vercel.app" }],
-  creator: "AI Dev Notes",
-  publisher: "AI Dev Notes",
+  authors: [{ name: "Horse & Panda", url: "https://ai-dev-notes.vercel.app" }],
+  creator: "Horse & Panda",
+  publisher: "Horse & Panda",
   formatDetection: {
     email: false,
     address: false,
@@ -35,8 +35,8 @@ export const metadata: Metadata = {
     canonical: '/',
     types: {
       'application/rss+xml': [
-        { url: '/rss.xml', title: 'AI Development Notes RSS Feed' },
-        { url: '/atom.xml', title: 'AI Development Notes Atom Feed' },
+        { url: '/rss.xml', title: 'Horse & Panda RSS Feed' },
+        { url: '/atom.xml', title: 'Horse & Panda Atom Feed' },
       ],
     },
   },
@@ -44,23 +44,23 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://ai-dev-notes.vercel.app",
-    title: "AI Development Notes",
-    description: "Insights, tutorials, and discoveries in AI development",
-    siteName: "AI Development Notes",
+    title: "Horse & Panda",
+    description: "Personal blog of Horse & Panda",
+    siteName: "Horse & Panda",
     images: [
       {
-        url: "/api/og?title=AI Development Notes&summary=Insights, tutorials, and discoveries in AI development",
+        url: "/api/og?title=Horse & Panda&summary=Personal blog of Horse & Panda",
         width: 1200,
         height: 630,
-        alt: "AI Development Notes",
+        alt: "Horse & Panda",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Development Notes",
-    description: "Insights, tutorials, and discoveries in AI development",
-    images: ["/api/og?title=AI Development Notes&summary=Insights, tutorials, and discoveries in AI development"],
+    title: "Horse & Panda",
+    description: "Personal blog of Horse & Panda",
+    images: ["/api/og?title=Horse & Panda&summary=Personal blog of Horse & Panda"],
   },
   robots: {
     index: true,

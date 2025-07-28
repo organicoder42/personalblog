@@ -52,7 +52,7 @@ export default function Navbar() {
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="font-bold text-xl text-gray-900 dark:text-white">
-            AI Dev Notes
+            Horse & Panda
           </Link>
 
           {/* Desktop Navigation */}
