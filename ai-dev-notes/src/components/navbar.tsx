@@ -81,6 +81,12 @@ export default function Navbar() {
             >
               About
             </Link>
+            <Link 
+              href="/tutor" 
+              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            >
+              Tutor
+            </Link>
             <div className="w-64">
               <Search placeholder="Search posts..." maxResults={5} />
             </div>
@@ -137,6 +143,13 @@ export default function Navbar() {
                 onClick={() => setIsOpen(false)}
               >
                 About
+              </Link>
+              <Link 
+                href="/tutor" 
+                className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                Tutor
               </Link>
             </div>
           </div>
