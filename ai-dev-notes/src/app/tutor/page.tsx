@@ -11,7 +11,7 @@ export default function TutorPage() {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: 'assistant',
-      content: "Hello! I'm Ed Donner, your web development tutor. I'm here to help you master the art of building amazing web applications. What would you like to learn about today? Whether it's React, Next.js, TypeScript, or any other web dev topic, I'm excited to guide you through it!"
+      content: "Hello! I'm Victor Eremitus, your web development tutor. I'm here to help you master the art of building amazing web applications. What would you like to learn about today? Whether it's React, Next.js, TypeScript, or any other web dev topic, I'm excited to guide you through it!"
     }
   ]);
   const [input, setInput] = useState('');
@@ -61,7 +61,7 @@ export default function TutorPage() {
       <div className="mb-8">
         <h1 className="text-4xl font-bold mb-4">Web Dev Tutor</h1>
         <p className="text-lg text-gray-600 dark:text-gray-400">
-          Learn web development with Ed Donner - your AI-powered coding mentor
+          Learn web development with Victor Eremitus - your AI-powered coding mentor
         </p>
       </div>
 
@@ -93,7 +93,7 @@ export default function TutorPage() {
                     <div className="w-2 h-2 bg-gray-500 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
                     <div className="w-2 h-2 bg-gray-500 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
                   </div>
-                  <span className="text-sm">Ed is thinking...</span>
+                  <span className="text-sm">Victor is thinking...</span>
                 </div>
               </div>
             </div>
@@ -107,7 +107,7 @@ export default function TutorPage() {
               type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              placeholder="Ask Ed about web development..."
+              placeholder="Ask Victor about web development..."
               className="flex-1 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-transparent"
               disabled={isLoading}
             />
