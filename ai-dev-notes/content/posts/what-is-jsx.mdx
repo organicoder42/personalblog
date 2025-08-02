@@ -1,0 +1,324 @@
+---
+title: "Building Your First React App with JSX: A Beginner's Guide"
+publishedAt: "2025-08-02"
+summary: "Learn React and JSX fundamentals by building a simple web application from scratch. This tutorial covers components, JSX syntax, and modern React patterns."
+tags: ["react", "jsx", "javascript", "tutorial"]
+draft: false
+---
+
+
+# Building Your First React App with JSX: A Beginner's Guide
+
+## Introduction
+
+Welcome to the exciting world of React and JSX! In this tutorial, we'll build a simple React application from scratch, learning the fundamentals of JSX syntax, component creation, and modern React patterns.
+
+```jsx
+function HelloWorld() {
+  return <h1>Hello World</h1>;
+}
+```
+
+## What We'll Build
+
+Our project will be a simple web page that displays:
+- A greeting component
+- An article with dynamic content  
+- A centered image with generated alt text
+- A navigation link
+
+## Prerequisites
+
+- Basic knowledge of HTML, CSS, and JavaScript
+- A text editor (VS Code recommended)
+- A web browser
+- No build tools required - we'll use CDN links!
+
+## Project Setup
+
+### 1. Create the HTML Structure
+
+Start by creating an `index.html` file:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World JSX</title>
+</head>
+<body>
+    <div id="root"></div>
+
+    <!-- React and ReactDOM from CDN -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- Babel from CDN for JSX transformation -->
+    <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- My JSX code -->
+    <script type="text/babel" src="script.js"></script>
+</body>
+</html>
+```
+
+### 2. Understanding the Setup
+
+Let's break down what each script does:
+
+- **React**: The core React library that provides JSX support
+- **ReactDOM**: Handles rendering React components to the DOM  
+- **Babel**: Transforms JSX syntax into regular JavaScript
+- **script.js**: Our custom code (we'll create this next)
+
+## Creating Your First Components
+
+### 1. The HelloWorld Component
+
+Create a `script.js` file and add your first component:
+
+```javascript
+const HelloWorld = () => {
+    return <h1>Hello World</h1>;
+};
+```
+
+**Key Concepts:**
+- We're using a **const arrow function** (modern React convention)
+- The function returns JSX (HTML-like syntax in JavaScript)
+- Component names must start with a capital letter
+
+### 2. The Article Component
+
+Now let's create a more complex component:
+
+```javascript
+const Article = () => {
+    return (
+        <>
+            <div>
+                <p>This is a paragraph in an article component</p>
+                <p>And here is another paragraph</p>
+                <p>But I can also add a date</p>
+                {new Date().toDateString()}
+                <br />
+                <br />
+                {2 + 5} is seven in words
+                <br />
+                <ul>
+                    <li>This is a list item</li>
+                    <li>This is another list item</li>
+                    <li>This is a third list item</li>
+                </ul>
+                <img 
+                    src="https://picsum.photos/200/300" 
+                    alt="Random image"
+                    style={{ display: 'block', margin: '0 auto' }}
+                />
+                <a href="https://www.google.com">Google</a>
+            </div>
+        </>
+    );
+};
+```
+
+**Key Concepts:**
+- **React Fragments** (`<>`): Group multiple elements without extra DOM nodes
+- **JavaScript Expressions** (`{}`): Embed dynamic content like dates and calculations
+- **Inline Styles**: Use `style={{}}` for CSS (note the double braces)
+- **JSX Attributes**: Use camelCase (e.g., `className` instead of `class`)
+
+## Live Demo
+
+Here's how your components will look when rendered in the browser.
+
+## Understanding JSX Syntax
+
+### JavaScript Expressions in JSX
+
+JSX allows you to embed JavaScript expressions using curly braces:
+
+```javascript
+// Dynamic content
+{new Date().toDateString()}
+
+// Mathematical expressions  
+{2 + 5}
+
+// Conditional rendering
+{isLoggedIn && <p>Welcome back!</p>}
+
+// Array mapping
+{items.map(item => <li key={item.id}>{item.name}</li>)}
+```
+
+### Interactive Counter Example
+
+Let's see JSX in action with a simple counter:
+
+```jsx
+function CounterDemo() {
+  const [count, setCount] = useState(0)
+  
+  return (
+    <div>
+      <h3>Interactive Counter</h3>
+      <p>Count: {count}</p>
+      <button onClick={() => setCount(count + 1)}>
+        Increment
+      </button>
+    </div>
+  )
+}
+```
+
+## Styling in JSX
+
+There are several ways to style your components:
+
+```javascript
+// Inline styles (object syntax)
+style={{ display: 'block', margin: '0 auto' }}
+
+// CSS classes (use className, not class)
+className="my-class"
+
+// Conditional styling
+style={{ 
+    color: isActive ? 'green' : 'red',
+    fontSize: '16px'
+}}
+```
+
+## Rendering Your App
+
+Finally, add the rendering code to display your components:
+
+```javascript
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+    <>
+        <HelloWorld />
+        <Article /> 
+    </>
+);
+```
+
+**What's happening:**
+1. `document.getElementById('root')` finds the div in your HTML
+2. `ReactDOM.createRoot()` creates a React 18 root container
+3. `root.render()` renders your JSX content into the DOM
+4. Both components are rendered inside a React Fragment
+
+## Function Declaration vs Const Arrow Function
+
+You might wonder about the difference between these two approaches:
+
+```javascript
+// Function declaration (traditional)
+function HelloWorld() {
+    return <h1>Hello World</h1>;
+}
+
+// Const arrow function (modern)
+const HelloWorld = () => {
+    return <h1>Hello World</h1>;
+};
+```
+
+**Key Differences:**
+- **Hoisting**: Function declarations are hoisted, const arrow functions are not
+- **this binding**: Arrow functions inherit `this` from surrounding scope
+- **Modern convention**: Most React codebases prefer const arrow functions for consistency
+
+## Adding Interactivity
+
+### State Management
+
+To make your app interactive, you'll need state. Here's how to add it:
+
+```javascript
+const Article = () => {
+    const [count, setCount] = useState(0);
+
+    return (
+        <div>
+            <p>Count: {count}</p>
+            <button onClick={() => setCount(count + 1)}>
+                Increment
+            </button>
+        </div>
+    );
+};
+```
+
+## Best Practices
+
+### 1. Component Organization
+- Keep components small and focused
+- Use descriptive names
+- Separate concerns (one component per file in larger projects)
+
+### 2. JSX Best Practices
+- Always close tags properly
+- Use camelCase for attributes
+- Remember that `class` becomes `className`
+- Use React Fragments to avoid unnecessary divs
+
+### 3. Performance Considerations
+- Use `key` prop when rendering lists
+- Avoid inline styles for complex styling
+- Consider using CSS modules or styled-components for larger projects
+
+## Common Pitfalls to Avoid
+
+### 1. Forgetting to Import React
+In modern React (17+), you don't always need to import React for JSX, but it's good practice to include it.
+
+### 2. Using `class` Instead of `className`
+```javascript
+// ❌ Wrong
+<div class="container">
+
+// ✅ Correct
+<div className="container">
+```
+
+### 3. Not Using Keys in Lists
+```javascript
+// ❌ Wrong
+{items.map(item => <li>{item.name}</li>)}
+
+// ✅ Correct
+{items.map(item => <li key={item.id}>{item.name}</li>)}
+```
+
+## Next Steps
+
+Now that you understand the basics, here are some ideas to expand your project:
+
+1. **Add more components** and learn about component composition
+2. **Implement state management** with React hooks
+3. **Add event handlers** for user interactions
+4. **Style your components** with CSS or CSS-in-JS
+5. **Consider using a build tool** like Create React App or Next.js for larger projects
+
+## Conclusion
+
+Congratulations! You've successfully built your first React application with JSX. You've learned:
+
+- How to set up a React project with CDN links
+- The basics of JSX syntax and component creation
+- How to embed JavaScript expressions in JSX
+- Modern React patterns with const arrow functions
+- How to render components to the DOM
+
+This foundation will serve you well as you continue your React journey. The concepts you've learned here apply to all React applications, whether you're building simple components or complex applications.
+
+Remember, React is all about building reusable, composable components. Start small, experiment, and gradually build up to more complex applications. Happy coding!
+
+---
+
+*This tutorial covers the fundamentals of React and JSX. For more advanced topics like hooks, context, and state management, check out the official React documentation and other tutorials in this series.*
