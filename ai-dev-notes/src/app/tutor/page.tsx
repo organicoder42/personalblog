@@ -37,19 +37,33 @@ export default function TutorPage() {
         body: JSON.stringify({ message: userMessage }),
       });
 
-      if (!response.ok) {
-        throw new Error('Failed to get response');
-      }
-
       const data = await response.json();
+
+      if (!response.ok) {
+        // Handle API errors with specific messages
+        const errorMessage = data.error || 'Failed to get response';
+        throw new Error(errorMessage);
+      }
       
       // Add assistant response
       setMessages(prev => [...prev, { role: 'assistant', content: data.reply }]);
     } catch (error) {
       console.error('Error:', error);
+      
+      let errorMessage = 'Sorry, I encountered an error. Please try again.';
+      
+      // Show more specific error messages
+      if (error instanceof Error) {
+        if (error.message.includes('OpenAI API key')) {
+          errorMessage = 'The AI tutor is currently unavailable. Please contact the site administrator.';
+        } else if (error.message.includes('Failed to fetch')) {
+          errorMessage = 'Network error. Please check your connection and try again.';
+        }
+      }
+      
       setMessages(prev => [...prev, { 
         role: 'assistant', 
-        content: 'Sorry, I encountered an error. Please try again.' 
+        content: errorMessage
       }]);
     } finally {
       setIsLoading(false);

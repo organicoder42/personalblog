@@ -55,8 +55,22 @@ Answer as Victor Eremitus would - with expertise, clarity, and genuine enthusias
     return NextResponse.json({ reply });
   } catch (error) {
     console.error('OpenAI API error:', error);
+    
+    // Provide more specific error messages
+    let errorMessage = 'Failed to generate response';
+    
+    if (error instanceof Error) {
+      if (error.message.includes('API key')) {
+        errorMessage = 'OpenAI API key is not properly configured';
+      } else if (error.message.includes('rate limit')) {
+        errorMessage = 'Rate limit exceeded. Please try again later.';
+      } else if (error.message.includes('quota')) {
+        errorMessage = 'API quota exceeded. Please contact the administrator.';
+      }
+    }
+    
     return NextResponse.json(
-      { error: 'Failed to generate response' },
+      { error: errorMessage },
       { status: 500 }
     );
   }
