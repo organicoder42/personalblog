@@ -59,9 +59,9 @@ export default function TutorPage() {
   return (
     <div className="container mx-auto px-4 py-8 max-w-4xl">
       <div className="mb-8">
-        <h1 className="text-4xl font-bold mb-4">Web Dev Tutor</h1>
+        <h1 className="text-4xl font-bold mb-4">Victor Eremitus</h1>
         <p className="text-lg text-gray-600 dark:text-gray-400">
-          Learn web development with Victor Eremitus - your AI-powered coding mentor
+          Your AI-powered web development mentor
         </p>
       </div>
 

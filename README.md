@@ -1,12 +1,13 @@
-# Personal Blog
+# Horse & Panda
 
-A modern, fast, and SEO-optimized personal blog built with Next.js and TypeScript.
+A modern, fast, and SEO-optimized personal blog built with Next.js and TypeScript, featuring an AI-powered web development tutor.
 
 ## Features
 
 - 🚀 Built with Next.js 15 and React 19
 - 📝 MDX support for rich content authoring
-- 🎨 Dark/Light theme with next-themes
+- 🤖 AI-powered web development tutor (Victor Eremitus) with OpenAI integration
+- 🎨 Dark/Light theme with next-themes and Tailwind CSS v4
 - 🔍 Full-text search with Fuse.js
 - 📱 Fully responsive design
 - 🏷️ Tag-based content organization
@@ -33,12 +34,22 @@ A modern, fast, and SEO-optimized personal blog built with Next.js and TypeScrip
    npm install
    ```
 
-2. **Run the development server**:
+2. **Configure environment variables**:
+   Copy `.env.example` to `.env.local` and add your OpenAI API key:
+   ```bash
+   cp .env.example .env.local
+   ```
+   Edit `.env.local` and add:
+   ```
+   OPENAI_API_KEY=your_openai_api_key_here
+   ```
+
+3. **Run the development server**:
    ```bash
    npm run dev
    ```
 
-3. **Open your browser**:
+4. **Open your browser**:
    Navigate to [http://localhost:3000](http://localhost:3000)
 
 ## Available Scripts
@@ -63,6 +74,17 @@ date: "2024-01-01"
 tags: ["tag1", "tag2"]
 ---
 ```
+
+## AI Tutor
+
+The blog includes an AI-powered web development tutor accessible at `/tutor`. Victor Eremitus is designed to help with:
+
+- React and Next.js concepts
+- TypeScript best practices
+- Web development fundamentals
+- Code reviews and optimization tips
+
+**Note**: Requires OpenAI API key configuration (see Getting Started section).
 
 ## Deployment
 
