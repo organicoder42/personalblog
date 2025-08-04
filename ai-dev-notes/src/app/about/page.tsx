@@ -9,7 +9,7 @@ export default function AboutPage() {
   return (
     <div className="container mx-auto px-4 py-8 max-w-4xl">
       <div className="prose prose-gray dark:prose-invert max-w-none">
-        <h1>About AI Development Notes</h1>
+        <h1>About Horse & Panda</h1>
         
         <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">
           Welcome to AI Development Notes, your go-to resource for insights, tutorials, 
