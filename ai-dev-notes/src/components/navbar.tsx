@@ -87,6 +87,12 @@ export default function Navbar() {
             >
               Tutor
             </Link>
+            <Link 
+              href="/dashboard" 
+              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            >
+              Dashboard
+            </Link>
             <div className="w-64">
               <Search placeholder="Search posts..." maxResults={5} />
             </div>
@@ -150,6 +156,13 @@ export default function Navbar() {
                 onClick={() => setIsOpen(false)}
               >
                 Tutor
+              </Link>
+              <Link 
+                href="/dashboard" 
+                className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                Dashboard
               </Link>
             </div>
           </div>
